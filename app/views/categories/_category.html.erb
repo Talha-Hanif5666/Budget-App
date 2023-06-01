@@ -1,0 +1,13 @@
+<div id="<%= dom_id category %>">
+  <p>
+    <strong>Name:</strong>
+    <%= category.name %>
+  </p>
+  <p>
+    <% if resource.image.attached? %>
+      <strong>Name:</strong>
+      <%= image_tag(category.icon, style:) %>
+    <% end %>
+  </p>
+
+</div>
