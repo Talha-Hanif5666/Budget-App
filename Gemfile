@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 gem 'devise'
+gem 'rspec-rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'tailwindcss-rails'
 
