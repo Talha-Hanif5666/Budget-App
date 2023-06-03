@@ -1,6 +1,8 @@
 <div class="transaction-card">
-  <%= transaction.name %>
+  <%= transaction.name %> <br>
+<%= transaction.created_at.strftime('%d-%B-%Y') %>
   <p>
     $ <%= transaction.amount %>
   </p>
+  
 </div>
