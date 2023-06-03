@@ -1,0 +1,26 @@
+<div class="new-head">
+  <%= link_to categories_path, class: "back-link" do %>
+    <i class="bi bi-arrow-left"></i>
+  <% end %>
+    <p>Transactions</p>
+    <i class="bi bi-list"></i>
+</div>
+<div class="transaction-total">
+  <p>Total Amount: <%= @total %></p>
+  <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "header-link" %>
+</div>
+<p style="color: green"><%= notice %></p>
+
+<div id="transactions">
+  <% if @transactions.empty? %>
+      <div class="message">There are no transactions to display. Add one.</div>
+    <% else %>
+    <% @transactions.each do |transaction| %>
+      <%= render transaction %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class= "btn-div" >
+  <%= link_to "New transaction", new_transaction_path, class: "category-btn" %>
+</div>

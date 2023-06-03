@@ -1,0 +1,9 @@
+<div class="new-head">
+  <%= link_to transactions_path(category_id: 1), class: "back-link" do %>
+    <i class="bi bi-arrow-left"></i>
+  <% end %>
+    <p>New Transaction</p>
+    <i class="bi bi-list"></i>
+</div>
+
+<%= render "form", transaction: @transaction %>
