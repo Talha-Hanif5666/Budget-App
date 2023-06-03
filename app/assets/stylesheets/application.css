@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap');
+
+.category-image {
+  width: 3rem;
+  height: 3rem;
+}
+
+.category-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  margin: 1rem 2rem;
+}
+
+.main-style {
+  position: relative;
+  height: 100%;
+}
+
+.btn-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #5fb523;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.category-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #5fb523;
+  border: 2px solid #fff;
+  width: 90%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}

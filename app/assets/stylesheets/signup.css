@@ -1,0 +1,77 @@
+.registration-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  background-color: #3778c2;
+}
+
+.registration-button {
+  border: none;
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.form-input {
+  border: none;
+  width: 100%;
+}
+
+.form-div {
+  border-bottom: solid #e5e4e2 1px;
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.registration-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.question {
+  color: #b6b6b4;
+}
+
+.new-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  background-color: #3778c2;
+}
+
+.new-save {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  background-color: #3778c2;
+}
+
+#transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transaction-card {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  background-color: #fff;
+  margin-top: 1.5rem;
+}
+
+.sign-color {
+  background-color: #fff;
+}

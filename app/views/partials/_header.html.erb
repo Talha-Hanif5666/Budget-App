@@ -1,0 +1,10 @@
+<nav class="header-color">
+  <div class="header-arrange">
+    <i class="bi bi-list"></i>
+    <p><%= page %></p>
+    <i class="bi bi-search"></i>
+  </div>
+  <div class="link-arrange">
+    <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "header-link" %>
+  </div>
+</nav>

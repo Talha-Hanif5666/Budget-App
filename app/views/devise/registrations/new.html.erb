@@ -1,29 +1,37 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="registration-head">
+    <i class="bi bi-arrow-left"></i>
+    <p>REGISTER</p>
+    <div class="actions">
+      <%= f.submit "Next", class: "registration-button" %>
+    </div>
   </div>
+  <div class="sign-color">
+    <div class="field form-div">
+      <% f.label :email %>
+      <%= f.email_field :email, id: "Email", autofocus: true, autocomplete: "email", required: true, placeholder: "Email", class: "form-input" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="field form-div">
+      <% f.label :name %>
+      <%= f.text_field :name, id: "name", autofocus: true, autocomplete: "text", required: true, placeholder: "Name", class: "form-input" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="field form-div">
+      <% f.label :password %>
+      <%= f.password_field :password, id: "Password", autocomplete: "new-password", placeholder: "password (6 character minimum)", class: "form-input" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+    <div class="field form-div">
+      <% f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, id: "Password_confirmation", autocomplete: "new-password", placeholder: "Password Confirmation", class: "form-input" %>
+    </div>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="registration-links">
+  <div class="question">Already have an account?</div>
+  <%= render "devise/shared/links" %>
+</div>

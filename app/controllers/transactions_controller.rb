@@ -1,9 +1,12 @@
 class TransactionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_transaction, only: %i[show edit update destroy]
 
   # GET /transactions or /transactions.json
   def index
-    @transactions = Transaction.all
+    @category = Category.find(params[:category_id])
+    @transactions = @category.transactions.order(created_at: :desc)
+    @total = @category.transactions.sum(:amount)
   end
 
   # GET /transactions/1 or /transactions/1.json
@@ -19,11 +22,14 @@ class TransactionsController < ApplicationController
 
   # POST /transactions or /transactions.json
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = Transaction.create(transaction_params)
+    @transaction.author = current_user
 
     respond_to do |format|
       if @transaction.save
-        format.html { redirect_to transaction_url(@transaction), notice: 'Transaction was successfully created.' }
+        format.html do
+          redirect_to transactions_path(transaction_category), notice: 'Transaction was successfully created.'
+        end
         format.json { render :show, status: :created, location: @transaction }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +70,10 @@ class TransactionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def transaction_params
-    params.require(:transaction).permit(:name, :amount)
+    params.require(:transaction).permit(:name, :amount, :category_id)
+  end
+
+  def transaction_category
+    params.require(:transaction).permit(:category_id)
   end
 end

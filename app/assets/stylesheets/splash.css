@@ -1,0 +1,42 @@
+.height {
+  height: 100vh;
+}
+
+.splash-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.splash-login {
+  color: white;
+  background-color: #3778c2;
+  font-size: 1rem;
+  padding: 1rem 13rem;
+  text-decoration: none;
+}
+
+.splash-signup {
+  font-size: 1rem;
+  padding: 1rem 13rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.bottom {
+  justify-self: end;
+}
+
+.splash-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fonts {
+  font-family: 'Lobster', cursive;
+}

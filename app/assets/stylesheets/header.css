@@ -1,0 +1,28 @@
+.header-color {
+  padding: 1rem 0.5rem;
+  color: #fff;
+  background-color: #3778c2;
+}
+
+.header-arrange {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-arrange {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.transaction-total {
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 0.5rem;
+}
