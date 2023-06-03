@@ -51,8 +51,6 @@
   </ul>
 </details>
 
-### Live Link <a name="Live link"></a>
-The hosted app can be found [here](https://rails-6yhy.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
